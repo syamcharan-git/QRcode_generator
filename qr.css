@@ -1,0 +1,127 @@
+/* Smooth animated gradient background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #00c6ff, #0072ff, #00f5a0, #00c6ff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Main container layout */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+  padding: 40px;
+  backdrop-filter: blur(15px);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Left side input */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  width: 45%;
+}
+
+.input-box h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  box-shadow: 0 0 10px #00f5a0;
+}
+
+.input-box button {
+  background: #00f5a0;
+  color: #003f5c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #00c6ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Right side QR box */
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+}
+
+#qrcode {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.download-btn {
+  background: #0072ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #00f5a0;
+  color: #003f5c;
+}
+
+/* Footer */
+.footer {
+  color: white;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.9;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-box">
+      <h1>QR CODE GENERATOR</h1>
+      <input type="text" id="text" placeholder="Enter text or URL...">
+      <button onclick="generateQR()">Generate QR</button>
+    </div>
+
+    <div class="qr-box">
+      <div id="qrcode"></div>
+      <a id="download" class="download-btn" download="qrcode.png">Download QR</a>
+    </div>
+  </div>
+
+  <p class="footer">SAHE Batch [10] AIML 1</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
